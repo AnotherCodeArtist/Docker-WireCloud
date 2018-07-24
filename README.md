@@ -29,7 +29,7 @@ Now you are good to start the wirecloud container:
 docker run -d --name wirecloud -p 80:80 \
     -v config_vol:/opt/wirecloud_instance \
     --link "postgres:postgres" \
-    fhjima/wirecloud:1.1-pg-able
+    fhjima/docker-wirecloud
 ```
 
 This will start the standalone configuration of WireCloud. You can change this
