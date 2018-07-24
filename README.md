@@ -29,7 +29,7 @@ Now you are good to start the wirecloud container:
 docker run -d --name wirecloud -p 80:80 \
     -v config_vol:/opt/wirecloud_instance \
     --link "postgres:postgres" \
-    fhj/wirecloud:1.1-pg-able
+    fhjima/wirecloud:1.1-pg-able
 ```
 
 This will start the standalone configuration of WireCloud. You can change this
@@ -58,3 +58,7 @@ DATABASES = {
 Now you are good to restart you container:
 
 `docker restart wirecloud`
+
+Now you are almost done. All that is left is probably setting a new superuser:
+
+`docker exec -it wirecloud su wirecloud -c "python manage.py createsuperuser"`
